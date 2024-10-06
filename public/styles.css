@@ -646,16 +646,36 @@ textarea{
 
 }
 
+@media only screen and (max-width: 600px) {
+    header {
+        background-size: contain; 
+        background-position: center center; 
+        background-attachment: scroll; 
+        height: auto; 
+    }
 
+    .header-main {
+        height: 450px;
+    }
 
+    .header-text {
+        margin-top: 20px; 
+        height: auto;
+    }
 
+    .name {
+        font-size: 40px; 
+    }
 
+    .text-work {
+        font-size: 18px; 
+    }
 
-
-
-
-
-
+    .header-text button {
+        margin-top: 30px; 
+        padding: 10px 15px; 
+    }
+}
 
 
 
