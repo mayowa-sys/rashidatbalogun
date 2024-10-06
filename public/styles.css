@@ -165,7 +165,7 @@ nav.scrolled a:after {
     border: 1px solid #FFD700;
     border-radius: 40px;
     color: white;
-    transition: color 1s;
+    transition: color 0.5s;
 }
 
 .header-text button:hover{

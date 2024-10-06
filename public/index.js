@@ -97,3 +97,20 @@ document.getElementById('contactForm').addEventListener('submit', async (event) 
         }
     }
 });
+
+function downloadCV(event, element, filePath) {
+    event.preventDefault();
+
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+    if (isIOS) {
+        window.open(filePath, '_blank');
+    } else {
+        const tempLink = document.createElement('a');
+        tempLink.href = filePath;
+        tempLink.setAttribute('download', element.getAttribute('download'));
+        tempLink.click();
+    }
+}
+
+  
