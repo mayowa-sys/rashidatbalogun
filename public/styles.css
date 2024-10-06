@@ -648,8 +648,8 @@ textarea{
 
 @media only screen and (max-width: 600px) {
     header {
-        background-image: url(images/img-1.jpg);
-        background-size: contain; 
+        background-image: linear-gradient( rgba(71, 27, 37, 0.4), rgba(73, 39, 29, 0.5) ), url(images/img-1.jpg);
+        background-size: cover; 
         background-position: center center; 
         background-attachment: scroll; 
         height: auto; 
