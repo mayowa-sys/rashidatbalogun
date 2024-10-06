@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 document.getElementById('contactForm').addEventListener('submit', async (event) => {
     event.preventDefault();  
 
@@ -72,12 +71,14 @@ document.getElementById('contactForm').addEventListener('submit', async (event) 
     if (isValid) {
         const formData = new FormData(event.target);
 
+        // Log form data for debugging purposes
         for (const [key, value] of formData.entries()) {
             console.log(`${key}: ${value}`);
         }
 
         try {
-            const response = await fetch('http://localhost:3000/contact', {
+            // Use a relative URL instead of hardcoded localhost
+            const response = await fetch('/contact', {
                 method: 'POST',
                 body: formData,
             });
@@ -85,8 +86,8 @@ document.getElementById('contactForm').addEventListener('submit', async (event) 
             const data = await response.json();
 
             if (data.success) {
-                window.location.href = data.redirectUrl;
                 alert('Email sent successfully');
+                window.location.href = data.redirectUrl;
             } else {
                 alert('Failed to send email. Try again later.');
             }
