@@ -31,9 +31,9 @@ app.post('/contact', upload.none(), (req, res) => {
 
     // Set up mail options
     const mailOptions = {
-        from: process.env.EMAIL_USER, 
-        replyTo: email,
-        to: 'mabdurrahman.balogun@gmail.com',
+        from: process.env.EMAIL_USER, // Authenticated sender's Gmail account
+        replyTo: email, // The email address entered in the contact form
+        to: 'rtemibalogun@gmail.com',
         subject: `Contact Form Submission from ${name}`,
         text: message,
     };
