@@ -263,81 +263,13 @@ nav.scrolled a:after {
     justify-content: center;
 }
 
-.media-holder {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap; 
+.portfolio-text {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
     margin-top: 30px;
 }
 
-.image-box {
-    width: 30%;
-    margin: 10px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.image-box img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.image-box:hover img {
-    transform: scale(1.1);
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow: hidden;
-    width: 0;
-    height: 100%;
-    transition: width 0.3s ease;
-}
-
-.container:hover .overlay {
-    width: 100%;
-}
-
-
-.text {
-    color: white;
-    font-size: 18px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 10px;
-}
-
-.linkto {
-    position: absolute;
-    top: 80%;
-    font-weight: bold;
-    font-size: 12px;
-    letter-spacing: 1px;
-    left: 50%;
-    padding: 5px 10px;
-    border-radius: 20px;
-    background-color: #edc9bd;
-    transform: translate(-50%, -50%);
-}
-
-.linkto a{
-    text-decoration: none;
-}
-
-/* Adjusted the general styling to blend Skills with the Portfolio section */
 .subheading {
     font-size: 24px;
     color: #555;
