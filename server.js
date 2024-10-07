@@ -31,11 +31,13 @@ app.post('/contact', upload.none(), (req, res) => {
 
     // Set up mail options
     const mailOptions = {
-        from: email,
+        from: process.env.EMAIL_USER, 
+        replyTo: email,
         to: 'mabdurrahman.balogun@gmail.com',
         subject: `Contact Form Submission from ${name}`,
         text: message,
     };
+    ;
 
     // Send the email
     transporter.sendMail(mailOptions, (error, info) => {
